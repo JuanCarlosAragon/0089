@@ -31,4 +31,11 @@ public class AgendaTelefonica
     public String lookupNumber(String name){
         return agenda.get(name);
     }
+    
+    /**
+     * Print all keys
+     */
+    public void printAllNames(){
+        System.out.println(agenda.keySet());
+    }
 }
