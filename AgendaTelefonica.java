@@ -1,4 +1,4 @@
-
+import java.util.HashMap;
 /**
  * Write a description of class AgendaTelefonica here.
  * 
@@ -7,27 +7,28 @@
  */
 public class AgendaTelefonica
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class AgendaTelefonica
-     */
-    public AgendaTelefonica()
-    {
-        // initialise instance variables
-        x = 0;
+    private HashMap<String,String> agenda;
+    
+    public AgendaTelefonica(){
+        agenda = new HashMap<>();
     }
-
+    
     /**
-     * An example of a method - replace this comment with your own
+     * Introduce un número nuevo en la agenda
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param name nombre de la persona de contacto
+     * @param number numero de la persona de contacto
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void enterNumber(String name, String number){
+        agenda.put(name, number);
+    }
+    
+    /**
+     * Devuelve el número de la persona buscada
+     * 
+     * @param name nombre de la persona que queremos saber el número
+     */
+    public String lookupNumber(String name){
+        return agenda.get(name);
     }
 }
